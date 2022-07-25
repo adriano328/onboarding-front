@@ -5,13 +5,16 @@ import { CategoriaListComponent } from './categoria-list/categoria-list.componen
 
 
 
+
+
 @NgModule({
   declarations: [
-    CategoriaComponent,
     CategoriaListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+   
+    
   ]
 })
 export class CategoriaModule { }

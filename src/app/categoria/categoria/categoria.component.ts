@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-categoria',
@@ -7,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriaComponent implements OnInit {
 
-  constructor() { }
+  situacao : String = '';
+
+  form!: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { 
+    this.form = this.formBuilder.group({
+      nome:['']
+    })
+  }
 
   ngOnInit(): void {
   }

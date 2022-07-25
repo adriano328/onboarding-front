@@ -1,1 +1,18 @@
-<p>categoria works!</p>
+<div class="painel">
+    <p-panel header="Categoria">
+        <form [formGroup]="form"></form>
+        <div class="grid">
+                <div class="col-8 input-categoria">
+                    <p class="categoria-nome">Nome:</p>
+                    <input type="text" pInputText>
+                </div>
+                <div class="col-4">
+                    <p>Situação</p>
+                    <p-radioButton class="radio-situacao-categoria" name="ativo" value="true" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton>
+                    <p-radioButton class="radio-situacao-categoria" name="ativo" value="true" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton> 
+                </div>
+        </div>
+        <p-button label="Click" ></p-button>
+        <p-button label="Click" ></p-button>
+     </p-panel>      
+</div>

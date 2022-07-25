@@ -1,0 +1,43 @@
+.painel{
+    height: 100%;
+    width: 100%;
+}
+::ng-deep .painel{
+    background-color: white;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    
+
+    .p-panel {
+        margin-top: 2%;
+        margin-left: 15%;
+        margin-right: 15%;
+        .p-panel-header{
+            background-color: #4153b3;
+            color: white;
+
+        }
+
+        input{
+            margin-top: 1%;
+            width: 100%;
+        }
+
+
+
+        .radio-situacao-categoria{
+            margin-top: 2%;
+            margin-left: 5%;
+        }
+
+        p-button{
+            position: relative;
+            left: 80%;
+            margin-left: 2%;
+        }
+
+    }
+
+}
