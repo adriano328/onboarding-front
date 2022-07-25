@@ -1,0 +1,71 @@
+.menu{
+    background-color:  #2a3791;
+    width: 100%;
+}
+:host ::ng-deep .p-menubar{
+    background-color:  #2a3791;
+    border: 1px solid #2a3791;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border-radius: 0px;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    color: white;
+ }
+
+ ::ng-deep .pi-th-large:before {
+    color: white;
+}
+
+::ng-deep .pi-home:before {
+    color: white;
+}
+
+::ng-deep .p-menubar .p-menuitem-link {
+    background: #2a3791;
+    
+}
+
+::ng-deep .p-menubar .p-menuitem-link .p-menuitem-text {
+    color: white;
+}
+
+::ng-deep .pi-trash:before {
+    color: white;
+}
+
+::ng-deep .pi-refresh:before {
+    color: white;
+}
+
+
+::ng-deep .p-menubar .p-menuitem-link:not(.p-disabled):hover {
+    background: #2a3791;
+}
+
+
+::ng-deep .p-menubar .p-submenu-list{
+    background: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menuitem.p-menuitem-active > .p-menuitem-link {
+    background: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover {
+    background: #2a3791;
+    
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+    color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text {
+    color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menuitem-link {
+    background: #2a3791;
+}
