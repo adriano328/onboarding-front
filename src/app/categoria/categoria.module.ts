@@ -3,13 +3,9 @@ import { CommonModule } from '@angular/common';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaListComponent } from './categoria-list/categoria-list.component';
 
-
-
-
-
 @NgModule({
   declarations: [
-    CategoriaListComponent
+    
   ],
   imports: [
     CommonModule,

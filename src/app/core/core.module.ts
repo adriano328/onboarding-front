@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {DropdownModule} from 'primeng/dropdown';
 import {MenubarModule} from 'primeng/menubar';
+import { TableModule } from 'primeng/table';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {MenubarModule} from 'primeng/menubar';
     FormsModule,
     ReactiveFormsModule,
     DropdownModule,
-    MenubarModule
+    MenubarModule,
+    TableModule
     
     ]
 })

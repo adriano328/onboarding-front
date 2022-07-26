@@ -11,6 +11,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { TopbarComponent } from './core/topbar/topbar.component';
 import { FormBuilder } from '@angular/forms';
+import { CategoriaListComponent } from './categoria/categoria-list/categoria-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormBuilder } from '@angular/forms';
     TopbarComponent,
     MenuComponent,
     FooterComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    CategoriaListComponent
   ],
   imports: [
     BrowserModule,
