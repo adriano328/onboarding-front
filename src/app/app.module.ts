@@ -13,6 +13,7 @@ import { TopbarComponent } from './core/topbar/topbar.component';
 import { FormBuilder } from '@angular/forms';
 import { CategoriaListComponent } from './categoria/categoria-list/categoria-list.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { CategoriaListComponent } from './categoria/categoria-list/categoria-lis
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
+    
     
 
   ],
