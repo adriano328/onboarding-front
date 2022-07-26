@@ -1,6 +1,6 @@
 <div class="painel">
         <p-panel header="Categoria">
-            <form [formGroup]="form"></form>
+            <form [formGroup]="form">
             <div class="grid">
                     <div class="col-8 input-categoria">
                         <p class="categoria-nome">Nome:</p>
@@ -12,7 +12,8 @@
                         <p-radioButton class="radio-situacao-categoria" name="ativo" value="false" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton> 
                     </div>
             </div>
-            <p-button><i class="pi pi-check"></i><p class="text-btn">Salvar</p></p-button>
+        </form>
+            <p-button (click)="save()"><i class="pi pi-check"></i><p class="text-btn">Salvar</p></p-button>
             <p-button routerLink="/categoria-list"><i class="pi pi-times"></i><p class="text-btn">Cancelar</p></p-button>
          </p-panel>      
 </div>

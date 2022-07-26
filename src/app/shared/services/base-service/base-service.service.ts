@@ -5,6 +5,7 @@ import {ConfirmationService, MessageService} from 'primeng/api';
 import {Inject} from '@angular/core';
 import * as _ from 'lodash';
 
+
 export abstract class BaseService<T> {
 
   urlBase: string = '';

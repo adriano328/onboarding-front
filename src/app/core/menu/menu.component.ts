@@ -10,7 +10,7 @@ import { ICategoria } from 'src/app/shared/interfaces/ICategoria';
 })
 export class MenuComponent implements OnInit {
 
-  items!: ICategoria[];
+  items!: any[];
 
   
   constructor() { }

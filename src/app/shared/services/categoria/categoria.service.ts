@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
-import { BaseService } from '../base-service/base-services.service';
+import { BaseService } from '../base-service/base-service.service';
 
 
 @Injectable({
@@ -14,7 +14,10 @@ export class CategoriaService  extends BaseService<any>{
       @Inject(ConfirmationService) confirmationSrv: ConfirmationService,
       @Inject(MessageService) messageSrv: MessageService
   ) {
-    super('categorias', http, confirmationSrv, messageSrv);
+    super('categoria', http, confirmationSrv, messageSrv);
   }
+
+
+  
   
 }

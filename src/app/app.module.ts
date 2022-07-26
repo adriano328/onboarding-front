@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { MenuComponent } from './core/menu/menu.component';
 import { TopbarComponent } from './core/topbar/topbar.component';
 import { FormBuilder } from '@angular/forms';
 import { CategoriaListComponent } from './categoria/categoria-list/categoria-list.component';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 
 
@@ -32,12 +33,12 @@ import { CategoriaListComponent } from './categoria/categoria-list/categoria-lis
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
-    
+    HttpClientModule
     
     
 
   ],
-  providers: [],
+  providers: [ConfirmationService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
