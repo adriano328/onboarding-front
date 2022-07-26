@@ -17,9 +17,10 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {
+      {    
           label: 'Pagina Incial',
           icon: 'pi pi-home',
+          routerLink:['/categoria-list']
       },
       {
           label: 'Cadastro',
