@@ -3,6 +3,8 @@ import { FormGroup, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { SituacaoEnum } from 'src/app/shared/interfaces/enums/situacaoEnum';
 
+
+
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',
@@ -19,14 +21,18 @@ export class CategoriaComponent implements OnInit {
   selectedCity: any;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+  
   ) { 
     this.form = this.formBuilder.group({
-      nome:['']
+      nome:[''],
+      situacao:['']
     })
   }
 
   ngOnInit(): void {
   }
+
+  
 
 }

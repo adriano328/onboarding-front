@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { FormBuilder } from '@angular/forms';
 import { CategoriaListComponent } from './categoria/categoria-list/categoria-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,13 +23,16 @@ import { CategoriaListComponent } from './categoria/categoria-list/categoria-lis
     MenuComponent,
     FooterComponent,
     CategoriaComponent,
-    CategoriaListComponent
+    CategoriaListComponent,
+   
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
+    
     
     
 
