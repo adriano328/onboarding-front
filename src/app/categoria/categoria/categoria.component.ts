@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { zipAll } from 'rxjs';
 import { SituacaoEnum } from 'src/app/shared/interfaces/enums/situacaoEnum';
 import { ICategoria } from 'src/app/shared/interfaces/ICategoria';
 import { BaseService } from 'src/app/shared/services/base-service/base-service.service';
@@ -15,7 +17,7 @@ import { CategoriaService } from 'src/app/shared/services/categoria/categoria.se
 })
 export class CategoriaComponent implements OnInit {
 
-  situacao : String = '';
+  situacao : any;
 
   form!: FormGroup;
 
@@ -23,27 +25,51 @@ export class CategoriaComponent implements OnInit {
 
   selectedCity: any;
 
-  categoriaSave: ICategoria = {} as ICategoria;
+  categoriaSave: any = {} as ICategoria;
+
+  idCategoriaFind!: number;
 
   constructor(
     private formBuilder: FormBuilder,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private route: ActivatedRoute
   
   ) { 
+    
+    this.idCategoriaFind = parseInt(this.route.snapshot.paramMap.get('id')!);
+
+
+    this.categoriaService.GetById(this.idCategoriaFind).then(success => {
+      this.categoriaSave = success
+    })
+  }
+
+  ngOnInit(): void {
+
     this.form = this.formBuilder.group({
       nome:[''],
       situacao:['']
     })
   }
 
-  ngOnInit(): void {
-  }
-
   save(){
-    this.categoriaSave.nome = "alefe";
-    this.categoriaSave.situacao = true;
 
-    this.categoriaService.post(this.categoriaSave);
+    this.categoriaSave.nome = this.form.value.nome;
+    this.categoriaSave.situacao = this.situacao;
+
+    
+    if(this.idCategoriaFind){
+
+       this.categoriaService.put(this.categoriaSave, this.idCategoriaFind);
+        
+    } else {
+      this.categoriaService.post(this.categoriaSave);
+    }
+    
   }
+
+
+
+ 
 
 }

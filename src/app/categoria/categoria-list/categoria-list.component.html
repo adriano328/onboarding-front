@@ -27,7 +27,7 @@
                 <p-button routerLink="/categoria"><i class="pi pi-plus"></i><p class="text-btn">Adicionar</p></p-button>
             </div>
         </ng-template>
-        <p-table [paginator]="true" [rows]="4" [showCurrentPageReport]="true" responsiveLayout="scroll"
+        <p-table [value]="listCategoria" [paginator]="true" [rows]="4" [showCurrentPageReport]="true" responsiveLayout="scroll"
         currentPageReportTemplate="" [rowsPerPageOptions]="[4,25,50]">
             <ng-template pTemplate="header">
                 <tr>
@@ -44,7 +44,7 @@
                     <td>{{categoria.situacao == true? "Ativo":"Inativo"}}</td>
                     <td>
                         <i class="pi pi-trash"></i>
-                        <i class="pi pi-pencil"  routerLink="/layout/atualizar-categoria/{{categoria.id}}" style="margin-left: 1vw; cursor: pointer;"></i>
+                        <i class="pi pi-pencil" routerLink="/categoria/{{categoria.id}}"></i>
                     </td>
                 </tr>
             </ng-template>

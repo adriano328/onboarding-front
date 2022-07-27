@@ -4,12 +4,12 @@
             <div class="grid">
                     <div class="col-8 input-categoria">
                         <p class="categoria-nome">Nome:</p>
-                        <input type="text" pInputText>
+                        <input type="text" formControlName="nome" [(ngModel)]="categoriaSave.nome" pInputText>
                     </div>
                     <div class="col-4">
                         <p class="text-situacao">Situação:</p>
-                        <p-radioButton class="radio-situacao-categoria" name="ativo" value="true" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton>
-                        <p-radioButton class="radio-situacao-categoria" name="ativo" value="false" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton> 
+                        <p-radioButton [(ngModel)]="categoriaSave.situacao" class="radio-situacao-categoria" name="ativo" [value]="true" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton>
+                        <p-radioButton [(ngModel)]="categoriaSave.situacao" class="radio-situacao-categoria" name="ativo" [value]="false" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton> 
                     </div>
             </div>
         </form>
@@ -17,3 +17,4 @@
             <p-button routerLink="/categoria-list"><i class="pi pi-times"></i><p class="text-btn">Cancelar</p></p-button>
          </p-panel>      
 </div>
+
