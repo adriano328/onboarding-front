@@ -4,6 +4,7 @@ import { CategoriaListComponent } from './categoria/categoria-list/categoria-lis
 import { CategoriaComponent } from './categoria/categoria/categoria.component';
 
 const routes: Routes = [
+   {path: '', component: CategoriaListComponent},
    {path: 'categoria/:id', component: CategoriaComponent},
    {path: 'categoria', component: CategoriaComponent},
    {path: 'categoria-list', component: CategoriaListComponent}

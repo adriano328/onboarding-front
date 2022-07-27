@@ -1,10 +1,10 @@
 <div class="painel">
     <p-panel header="Categoria">
-        <form [formGroup]="form"></form>
+        <form [formGroup]="form">
         <div class="grid">
                 <div class="col-8 input-categoria">
                     <p class="categoria-nome">Nome:</p>
-                    <input type="text" pInputText>
+                    <input type="text" formControlName="nome" name="nome" pInputText>
                 </div>
                 <div class="col-4">
                     <p>Situação:</p>
@@ -16,8 +16,9 @@
                       </select>
                 </div>
         </div>
-        <p-button><i class="pi pi-search"></i><p class="text-btn">Pesquisar</p></p-button>
-        <p-button><i class="pi pi-refresh"></i><p class="text-btn">Limpar</p></p-button>
+    </form>
+        <p-button (click)="findByNome()"><i class="pi pi-search"></i><p class="text-btn">Pesquisar</p></p-button>
+        <p-button (click)="resetForm()" ><i class="pi pi-refresh"></i><p class="text-btn">Limpar</p></p-button>
      </p-panel>      
 
      <p-panel>
@@ -43,7 +44,7 @@
                     <td>{{categoria.nome}}</td>
                     <td>{{categoria.situacao == true? "Ativo":"Inativo"}}</td>
                     <td>
-                        <i class="pi pi-trash"></i>
+                        <i class="pi pi-trash">Lixeira</i>
                         <i class="pi pi-pencil" routerLink="/categoria/{{categoria.id}}"></i>
                     </td>
                 </tr>

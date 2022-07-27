@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { ICategoria } from '../../interfaces/ICategoria';
 import { BaseService } from '../base-service/base-service.service';
 
 
@@ -17,7 +18,12 @@ export class CategoriaService  extends BaseService<any>{
     super('categoria', http, confirmationSrv, messageSrv);
   }
 
-
+  searchByName(nome: string){
+    return this.http.get<ICategoria>(`${this.urlBase}/listar-por-nome`,
+    {params: new HttpParams().set('nome', nome || '')}).pipe(
+      
+    )
+  }
   
   
 }
