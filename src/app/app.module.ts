@@ -17,6 +17,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
     FooterComponent,
     CategoriaComponent,
     CategoriaListComponent,
-   
+    
     
   ],
   imports: [
@@ -33,7 +34,8 @@ import { ConfirmationService, MessageService } from 'primeng/api';
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+   
     
     
 
