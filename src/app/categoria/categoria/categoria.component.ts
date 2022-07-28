@@ -36,12 +36,15 @@ export class CategoriaComponent implements OnInit {
   
   ) { 
     
+    
     this.idCategoriaFind = parseInt(this.route.snapshot.paramMap.get('id')!);
 
 
+   if(this.idCategoriaFind){
     this.categoriaService.GetById(this.idCategoriaFind).then(success => {
       this.categoriaSave = success
     })
+   }
   }
 
   ngOnInit(): void {
@@ -59,7 +62,7 @@ export class CategoriaComponent implements OnInit {
 
     
     if(this.idCategoriaFind){
-
+      
        this.categoriaService.put(this.categoriaSave, this.idCategoriaFind);
         
     } else {

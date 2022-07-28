@@ -44,8 +44,8 @@
                     <td>{{categoria.nome}}</td>
                     <td>{{categoria.situacao == true? "Ativo":"Inativo"}}</td>
                     <td>
-                        <i class="pi pi-trash">Lixeira</i>
-                        <i class="pi pi-pencil" routerLink="/categoria/{{categoria.id}}"></i>
+                        <i class="pi pi-trash" (click)="deleteCategoria(categoria.id)">Lixeira</i>
+                    
                     </td>
                 </tr>
             </ng-template>

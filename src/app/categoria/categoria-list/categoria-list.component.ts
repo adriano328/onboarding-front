@@ -27,11 +27,7 @@ export class CategoriaListComponent implements OnInit {
     private formBuilder: FormBuilder,
     private categoriaService: CategoriaService
   ) { 
-    this.categoriaService.GetAll().then(success =>{
-      
-      this.listCategoria = success;
-       console.log(this.listCategoria);
-    })
+   this.loadCategoria()
 
    
     
@@ -57,13 +53,16 @@ export class CategoriaListComponent implements OnInit {
     this.loadCategoria();
   }  
 
-  loadCategoria(){
-    this.categoriaService.GetAll().then(succes =>{
+async loadCategoria(){
+   await this.categoriaService.GetAll().then(succes =>{
       this.listCategoria = succes;
     })
   }
 
-
+ deleteCategoria(id: number){
+    this.categoriaService.delete(id, {useConfirm:false});
+    this.loadCategoria()
+  }
   
       
     
