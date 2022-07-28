@@ -61,7 +61,7 @@ async loadCategoria(){
 
  deleteCategoria(id: number){
     this.categoriaService.delete(id, {useConfirm:false});
-    this.loadCategoria()
+    this.listCategoria = this.listCategoria.filter((item: { id: number; }) => item.id != id);
   }
   
       
