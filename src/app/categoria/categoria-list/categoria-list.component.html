@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-4">
                     <p>Situação:</p>
-                    <select>
+                    <select class="form-control">
                         <option *ngFor="let situacao of situacoes"
                                 [value]="situacao">
                           {{SituacaoLabel[situacao]}}

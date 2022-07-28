@@ -44,8 +44,6 @@ export class CategoriaListComponent implements OnInit {
   async findByNome(){
       const dates = await lastValueFrom(this.categoriaService.searchByName(this.form.value.nome));
       this.listCategoria = dates;
-
-      console.log(dates)
   }
 
   resetForm(){
