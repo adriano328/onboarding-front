@@ -19,9 +19,12 @@ export class CategoriaListComponent implements OnInit {
 
   listCategoria: any = [];
 
+  situacaoSelect: string = "";
+
   public SituacaoLabel = SituacaoLabel;
 
   public situacoes = Object.values(SituacaoEnum);
+
 
   constructor(
     private formBuilder: FormBuilder,
@@ -45,6 +48,8 @@ export class CategoriaListComponent implements OnInit {
       const dates = await lastValueFrom(this.categoriaService.searchByName(this.form.value.nome));
       this.listCategoria = dates;
   }
+
+  
 
   resetForm(){
     this.form.reset();

@@ -1,6 +1,6 @@
 export enum SituacaoEnum {
-    Ativo = "ATIVO",
-    Inativo = "INATIVO"
+    Ativo = "Ativo",
+    Inativo = "Inativo"
 }
 
 export const SituacaoLabel:Record<SituacaoEnum, string> = {
