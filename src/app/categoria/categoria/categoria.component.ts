@@ -60,11 +60,6 @@ export class CategoriaComponent implements OnInit {
     this.categoriaSave.nome = this.form.value.nome;
     this.categoriaSave.situacao = this.situacao;
 
-    console.log(this.categoriaSave.situacao);
-    console.log(this.situacao);
-    
-    
-
     
     if(this.idCategoriaFind){
       

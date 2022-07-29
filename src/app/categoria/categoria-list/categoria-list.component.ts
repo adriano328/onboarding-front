@@ -19,7 +19,7 @@ export class CategoriaListComponent implements OnInit {
 
   listCategoria: any = [];
 
-  situacaoSelect: boolean = false;
+  situacaoSelect: string = "";
 
   public SituacaoLabel = SituacaoLabel;
 

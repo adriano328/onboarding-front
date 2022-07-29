@@ -1,14 +1,9 @@
-import { values } from "lodash"
-
 export enum SituacaoEnum {
     Ativo = "Ativo",
-    Inativo = "Inativo"    
-
+    Inativo = "Inativo"
 }
 
 export const SituacaoLabel:Record<SituacaoEnum, string> = {
     [SituacaoEnum.Ativo]: "Ativo",
     [SituacaoEnum.Inativo]: "Inativo",
 }
-
-
