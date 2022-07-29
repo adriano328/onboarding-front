@@ -45,8 +45,14 @@ export class CategoriaListComponent implements OnInit {
   }
 
   async findByNome(){
-      const dates = await lastValueFrom(this.categoriaService.searchByName(this.form.value.nome));
-      this.listCategoria = dates;
+   await this.categoriaService.GetAll({
+    pesquisa:{
+      nome: this.form.value.nome,
+      situacao: this.form.value.situacao
+    }
+   }).then(success => {
+    this.listCategoria = success
+   })
   }
 
   
