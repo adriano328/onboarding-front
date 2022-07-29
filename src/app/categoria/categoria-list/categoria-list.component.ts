@@ -19,7 +19,7 @@ export class CategoriaListComponent implements OnInit {
 
   listCategoria: any = [];
 
-  situacaoSelect: string = "";
+  situacaoSelect!: number;
 
   public SituacaoLabel = SituacaoLabel;
 
@@ -45,6 +45,8 @@ export class CategoriaListComponent implements OnInit {
   }
 
   async findByNome(){
+    console.log(this.form.value.situacao);
+    
    await this.categoriaService.GetAll({
     pesquisa:{
       nome: this.form.value.nome,

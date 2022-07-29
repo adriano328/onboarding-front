@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-4">
                     <p>Situação:</p>
-                    <select formControlName="situacao" type="number" [(ngModel)]="situacaoSelect">
+                    <select formControlName="situacao" type="number">
                         <option *ngFor="let situacao of situacoes"
                                 [ngValue]="situacao">
                           {{SituacaoLabel[situacao]}}
@@ -41,7 +41,7 @@
                 <tr>
                     <td>{{ i + 1 }}</td>
                     <td>{{categoria.nome}}</td>
-                    <td>{{categoria.situacao == true? "Ativo":"Inativo"}}</td>
+                    <td>{{categoria.situacao.toLowerCase()}}</td>
                     <td>
                         <i class="pi pi-pencil" routerLink="/categoria/{{categoria.id}}"></i>
                         <i class="pi pi-times" (click)="deleteCategoria(categoria.id)"></i>

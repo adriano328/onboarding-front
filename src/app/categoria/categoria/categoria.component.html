@@ -8,8 +8,8 @@
                     </div>
                     <div class="col-4">
                         <p class="text-situacao">Situação:</p>
-                        <p-radioButton [(ngModel)]="categoriaSave.situacao" class="radio-situacao-categoria" name="ativo" [value]="true" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton>
-                        <p-radioButton [(ngModel)]="categoriaSave.situacao" class="radio-situacao-categoria" name="ativo" [value]="false" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Inativo"></p-radioButton> 
+                        <p-radioButton [(ngModel)]="categoriaSave.situacao" class="radio-situacao-categoria" name="ativo" value="ATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton>
+                        <p-radioButton [(ngModel)]="categoriaSave.situacao" class="radio-situacao-categoria" name="inativo" value="INATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Inativo"></p-radioButton> 
                     </div>
             </div>
         </form>
