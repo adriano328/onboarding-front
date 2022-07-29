@@ -4,6 +4,8 @@ import { environment } from 'src/environments/environment';
 import {ConfirmationService, MessageService} from 'primeng/api';
 import {Inject} from '@angular/core';
 import * as _ from 'lodash';
+import { IQueryOptions } from '../../interfaces/IQueryOptions';
+import { PrepareHttpQuery } from '../../interfaces/PrepareHttpQuery';
 
 
 export abstract class BaseService<T> {
@@ -35,10 +37,9 @@ export abstract class BaseService<T> {
   }
 
   
-  public async GetAll(): Promise<IResultHttp<T[]>> {
-    return await this.http.get<IResultHttp<T[]>>(`${this.urlBase}`).toPromise().then();
+  public async GetAll(options?: IQueryOptions): Promise<IResultHttp<T[]>> {
+    return await this.http.get<IResultHttp<T[]>>(`${this.urlBase}${PrepareHttpQuery(options)}`).toPromise().then();
   }
-
  
   public async GetById(id: number): Promise<IResultHttp<T>> {
     const result = await this.http.get(`${this.urlBase}/${id}`).toPromise();
