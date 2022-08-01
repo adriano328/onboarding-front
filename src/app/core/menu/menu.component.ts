@@ -20,14 +20,14 @@ export class MenuComponent implements OnInit {
       {    
           label: 'Pagina Incial',
           icon: 'pi pi-home',
-          routerLink:['/categoria-list']
+          routerLink:['']
       },
       {
           label: 'Cadastro',
           icon: 'pi pi-th-large',
           items: [
-              {label: 'Categoria'},
-              {label: 'Produto'},
+              {label: 'Categoria', routerLink: 'categoria-list'},
+              {label: 'Produto', routerLink: 'produto-list'},
               {label: 'Cliente'}
           ]
       }

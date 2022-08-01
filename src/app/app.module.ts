@@ -11,9 +11,12 @@ import { CoreModule } from './core/core.module';
 import { FooterComponent } from './core/footer/footer.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { TopbarComponent } from './core/topbar/topbar.component';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { CategoriaListComponent } from './categoria/categoria-list/categoria-list.component';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { ProdutoListComponent } from "./produto/produto-list/ProdutoListComponent";
+import { ProdutoComponent } from './produto/produto/produto.component';
+import { ProdutoModule } from './produto/produto.module';
 
 
 
@@ -26,7 +29,8 @@ import { ConfirmationService, MessageService } from 'primeng/api';
     FooterComponent,
     CategoriaComponent,
     CategoriaListComponent,
-    
+    ProdutoComponent,
+    ProdutoListComponent
     
   ],
   imports: [
@@ -35,9 +39,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
     CoreModule,
     BrowserAnimationsModule,
     HttpClientModule,
-   
-    
-    
+    FormsModule
 
   ],
   providers: [ConfirmationService, MessageService],
