@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { SituacaoEnum, SituacaoLabel } from 'src/app/shared/interfaces/enums/situacaoEnum';
+import { ICategoria } from 'src/app/shared/interfaces/ICategoria';
 import { IProduto } from 'src/app/shared/interfaces/IProduto';
+import { CategoriaService } from 'src/app/shared/services/categoria/categoria.service';
 
 
 @Component({
@@ -28,7 +30,8 @@ export class ProdutoListComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    private categoriaService: CategoriaService
   ){
 
   }
@@ -37,6 +40,10 @@ export class ProdutoListComponent implements OnInit {
     this.form = this.formBuilder.group({
       nome:[''],
       situacao: ['']
+    }),
+
+    this.categoriaService.GetAll().then(success => {
+      this.listCategoria = success;
     })
 
   }
@@ -47,6 +54,12 @@ export class ProdutoListComponent implements OnInit {
 
   resetForm(){
 
+  }
+
+  getCategoria(){
+    this.categoriaService.GetAll().then(success => {
+      this.listCategoria = success;
+    })
   }
   
 }
