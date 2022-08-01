@@ -1,7 +1,3 @@
-
-
-
-
 .menu{
     background-color:  #2a3791;
    
@@ -16,9 +12,6 @@
     border-radius: 0px;
 }
 
-::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
-    color: white;
- }
 
  ::ng-deep .pi-th-large:before {
     color: white;
@@ -28,6 +21,7 @@
     color: white;
     font-size: 1.3em;
 }
+
 
 ::ng-deep .p-menubar .p-menuitem-link {
     background: #2a3791;
@@ -49,6 +43,12 @@
 
 ::ng-deep .p-menubar .p-menuitem-link:not(.p-disabled):hover {
     background: #2a3791;
+    -webkit-transition:none; 
+    -moz-transition:none; 
+    -ms-transition:none; 
+    -o-transition:none; 
+    transition:none;
+   
 }
 
 
@@ -60,20 +60,139 @@
     background: #2a3791;
 }
 
-::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover {
-    background: #2a3791;
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+    color: white;
+    -webkit-transition:none; 
+    -moz-transition:none; 
+    -ms-transition:none; 
+    -o-transition:none; 
+    transition:none;
     
 }
 
-::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
-    color: #2a3791;
-}
-
 ::ng-deep .p-menubar .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text {
-    color: #2a3791;
+    color: white;
 }
 
 ::ng-deep .p-menubar .p-menuitem-link {
     background: #2a3791;
 }
 
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: inset 0 0 0 0.15rem #2a3791;
+    -webkit-transition:none; 
+    -moz-transition:none; 
+    -ms-transition:none; 
+    -o-transition:none; 
+    transition:none;
+
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
+    background: #2a3791;
+    -webkit-transition:none; 
+    -moz-transition:none; 
+    -ms-transition:none; 
+    -o-transition:none; 
+    transition:none;
+    
+}
+
+::ng-deep .p-menubar .p-menuitem-link .p-menuitem-text {
+    color: white;
+    -webkit-transition:none; 
+    -moz-transition:none; 
+    -ms-transition:none; 
+    -o-transition:none; 
+    transition:none;
+  
+}
+
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover {
+    background-color: #2a3791;
+    -webkit-transition:none; 
+    -moz-transition:none; 
+    -ms-transition:none; 
+    -o-transition:none; 
+    transition:none;
+    pointer-events: all;
+    
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    color: white;
+    
+}
+
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
+    background: #2a3791;
+    -webkit-transition:none; 
+    -moz-transition:none; 
+    -ms-transition:none; 
+    -o-transition:none; 
+    transition:none;
+    
+}
+
+::ng-deep .pi-home:before {
+    background: #2a3791;
+    background-color: #2a3791;
+}
+
+::ng-deep .pi-th-large:before {
+    background: #2a3791;
+    background-color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover{
+    color: white;
+    background: #2a3791;
+    background-color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link{
+    color: white;
+    background: #2a3791;
+    background-color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menuitem-link {
+    color: white;
+    background: #2a3791;
+    background-color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover{
+    background: #2a3791;
+    background-color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menuitem-link:not(.p-disabled):hover {
+    background-color: #2a3791;
+    background-color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text{
+    color: white;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover{
+    background: #2a3791;
+    color: #2a3791;
+    pointer-events: none;
+    background-color: #2a3791;
+    
+}
+
+::ng-deep [_nghost-wma-c96] .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link{
+    background: #2a3791;
+    background-color: #2a3791;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover{
+    background: #2a3791;
+    background-color: #2a3791;
+}
