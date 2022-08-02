@@ -1,101 +1,136 @@
-::ng-deep .painel{
-    background-color: white;
-    font-family: 'ArialMT', 'Arial', sans-serif;
-    font-style: normal;
-    color: #FFFFFF;
-    
-    
-    .p-panel {
-        margin-top: 2%;
-        margin-left: 15%;
-        margin-right: 15%;
-        .p-panel-header{
-            background-color: #4153b3;
-            color: white;
+.produto-list-content{
 
-        }
-
-        input{
-            margin-top: 1%;
-            box-sizing: border-box;
-            width: 100%;
-        }
-
-        
-
-        .radio-situacao-categoria{
+    ::ng-deep .painel-produto-list{
+        background-color: white;
+        font-family: 'ArialMT', 'Arial', sans-serif;
+        font-style: normal;
+        color: #FFFFFF;
+             
+        .p-panel {
+            position: relative;
+            font-size: 0.7em;
             margin-top: 2%;
-            margin-left: 5%;
-        }
-
-        p-button{
-            position: relative;
-            left: 69.5%;
-            margin-left: 2%;
-        }
-
+            margin-left: 15%;
+            margin-right: 15%;
+            .p-panel-header{
+                background-color: #4153b3;
+                color: white;
     
-        p{
-            font-size: 1.2em;
-        }
-
-        select{
-            margin-top: 2.3%;
-            width: 20%;
-            height: 55%;
-            text-align: center;
-            border-radius: 5px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-        }
-
-        .text-btn{
-            margin-left: 7%;
-        }
-
-        i{
-            padding-left: 2%;
-        }
-
-        .selectCategoria{
-            margin-top: 4%;
-            margin-left: 6%;
-            width: 90%;
-        }
-
-        select{
-            width: 90%;
-
-        }
-
-        .text-categoria{
-           position: relative;
-           left: 7%;
-        }
-
-        .selectSituacao{
-            position: relative;
-            top: 4%;
-            left: 5%;
-          
+            }
+    
+            input{
+                margin-top: 1%;
+                box-sizing: border-box;
+                width: 100%;
+                height: 45%;
+                font-size: 1.2em;
+            }
+    
             
-        }
+    
+            .radio-situacao-categoria{
+                margin-top: 2%;
+                margin-left: 5%;
+            }
+    
+            .p-button{
+                position: relative;
+                left: 70.8%;
+                margin-left: 2%;
+                height: 3vh;
+                font-size: 0.9em;
+
+            }
+    
         
-        .btn{
-            margin-top: 1%;
-            margin-right: 0.8%;
+            p{
+                font-size: 1.2em;
+            }
+    
+            select{
+                margin-top: 2.3%;
+                width: 20%;
+                height: 45%;
+                text-align: center;
+                border-radius: 5px;
+                font-size: 1em;
+                border: 1px solid #ccc;
+            }
+    
+            .text-btn{
+                margin-left: 7%;
+            }
+    
+            i{
+                padding-left: 2%;
+            }
+    
+            .selectCategoria{
+                margin-top: 4%;
+                margin-left: 6%;
+                width: 90%;
+            }
+    
+            select{
+                width: 90%;
+    
+            }
+    
+            .text-categoria{
+               position: relative;
+               left: 7%;
+            }
+    
+            .selectSituacao{
+                position: relative;
+                top: 4%;
+                left: 5%;
+              
+                
+            }
+         
+    
+            .text-situacao{
+                position: relative;
+                margin-left: 5%;
+            }
         }
 
-        .text-situacao{
+
+        .panel-categoria-list{
             position: relative;
-            margin-left: 5%;
+
+            .btn-cabecalho{
+                position: absolute;
+                margin-left:73.8%;
+           }
+
+
+           th{
+            font-size: 0.8em;
+           }
+    
+            td{
+            font-size: 0.9em;
+                i{
+                    font-size: 1em;
+                    margin-left: 2%;
+                }
+            }
         }
+
+
+
+        }
+
+
+
+
+       
+    
+      
+    
+      
     }
-
-   .btn-cabecalho{
-        margin-left: 63%;
-   }
-
-  
-}
-
+    
+    
