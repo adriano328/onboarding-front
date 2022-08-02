@@ -1,54 +1,61 @@
 .header{
-    margin-right: 0.3%;
     font-family: Arial, Helvetica, sans-serif;
  
+    .grid{
+        height: 9vh;
 
-    .logo{
-        margin-left: 3%;
-    }
-
-
-    .text{
-        margin-top: 6%;
-        font-family: "Arial",
-    }
-
-    .sistema-onboarding{
-        font-size: 1.5em;
-        font-weight: 700;
-    }
-
-    .treinamento{
-        font-size: 1.5em;
-        font-weight: 700;
-        margin-left: 10%;
-    }
-
-    .background{
-        background-color: #4153b3;
-        
-        
-    }
-
-    .user{
-        margin-left: 70%;
-        margin-top: 8%;
-        color: white;    
-        font-size: 1em;    
-    }
-
-    .function{
-        margin-left:59%;
-        margin-top: 0.5%;
-        color: white;
-    }
-
-    .pi-user{
-        margin-top: 19%;
-        font-size: 1.5em;
-        color: white; 
-    }
-
+        .logo{
+            margin-left: 3%;
+            width: 85%;
+            margin-top: 2.5%;
+        }
     
+    
+        .text{
+            margin-top: 8%;
+            font-family: "Arial",
+        }
+    
+        .sistema-onboarding{
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-left: 5%;
+        }
+    
+        .treinamento{
+            font-size: 1.1em;
+            font-weight: 700;
+            margin-left: 16%;
+        }
+    
+        .background{
+            background-color: #4153b3;
+            height: 9vh;
+            
+        }
+    
+        .user{
+            margin-left: 70%;
+            margin-top: 8%;
+            color: white;    
+            font-size: 0.8em;    
+        }
+    
+        .function{
+            margin-left:59%;
+            margin-top: 0.5%;
+            color: white;
+            font-size: 0.8em; 
+        }
+    
+        .pi-user{
+            margin-top: 19%;
+            font-size: 1.2em;
+            color: white; 
+        }
+    
+        
+    }
+   
     
 }
