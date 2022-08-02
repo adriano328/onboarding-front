@@ -1,12 +1,15 @@
 <div class="painel">
-    <p-panel header="Categoria">
+    <p-panel>
+        <ng-template pTemplate="header">
+            <p>Categorias</p>
+        </ng-template>
         <form [formGroup]="form">
         <div class="grid">
-                <div class="col-8 input-categoria">
+                <div class="col-12 md:col-6 lg:col-8 input-categoria">
                     <p class="categoria-nome">Nome:</p>
                     <input type="text" formControlName="nome" name="nome" pInputText>
                 </div>
-                <div class="col-4">
+                <div class="col-12 md:col-6 lg:col-4">
                     <p>Situação:</p>
                     <select formControlName="situacao" type="number">
                         <option *ngFor="let situacao of situacoes"
@@ -17,38 +20,40 @@
                 </div>
         </div>
     </form>
-        <p-button (click)="findByNome()"><i class="pi pi-search"></i><p class="text-btn">Pesquisar</p></p-button>
+        <div class="buttons">
+            <p-button (click)="findByNome()"><i class="pi pi-search"></i><p class="text-btn">Pesquisar</p></p-button>
         <p-button (click)="resetForm()" ><i class="pi pi-refresh"></i><p class="text-btn">Limpar</p></p-button>
+        </div>
      </p-panel>   
-     <p-panel>
-        <ng-template pTemplate="header">
-            <p>Lista de categorias</p>
-            <div class="btn-cabecalho">
-                <p-button routerLink="/categoria"><i class="pi pi-plus"></i><p class="text-btn">Adicionar</p></p-button>
-            </div>
-        </ng-template>
-        <p-table [value]="listCategoria" [paginator]="true" [rows]="4" [showCurrentPageReport]="true" responsiveLayout="scroll"
-        currentPageReportTemplate="" [rowsPerPageOptions]="[4,25,50]">
+
+        <p-panel>
             <ng-template pTemplate="header">
-                <tr>
-                    <th>#</th>
-                    <th>Nome</th>
-                    <th>Situação</th>
-                    <th>Ações</th>
-                </tr>
+                <p>Lista de categorias</p>
+                <div class="btn-cabecalho">
+                    <p-button routerLink="/categoria"><i class="pi pi-plus"></i><p class="text-btn">Adicionar</p></p-button>
+                </div>
             </ng-template>
-            <ng-template pTemplate="body" let-categoria let-i="rowIndex">
-                <tr>
-                    <td>{{ i + 1 }}</td>
-                    <td>{{categoria.nome}}</td>
-                    <td>{{categoria.situacao.toLowerCase()}}</td>
-                    <td>
-                        <i class="pi pi-pencil" routerLink="/categoria/{{categoria.id}}"></i>
-                        <i class="pi pi-times" (click)="deleteCategoria(categoria.id)"></i>
-                    
-                    </td>
-                </tr>
-            </ng-template>
-        </p-table>
-    </p-panel>
-</div>
+            <p-table [value]="listCategoria" [paginator]="true" [rows]="4" [showCurrentPageReport]="true" responsiveLayout="scroll"
+            currentPageReportTemplate="" [rowsPerPageOptions]="[4,25,50]">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Situação</th>
+                        <th>Ações</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-categoria let-i="rowIndex">
+                        <tr>
+                            <td>{{ i + 1 }}</td>
+                            <td>{{categoria.nome}}</td>
+                            <td>{{categoria.situacao.toLowerCase()}}</td>
+                            <td>
+                                <i class="pi pi-pencil" routerLink="/categoria/{{categoria.id}}"></i>
+                                <i class="pi pi-times" (click)="deleteCategoria(categoria.id)"></i>
+                            </td>
+                        </tr>
+                </ng-template>
+            </p-table>
+        </p-panel>
+    </div>
