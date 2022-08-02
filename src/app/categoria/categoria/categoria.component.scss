@@ -1,48 +1,72 @@
-::ng-deep .painel{
-    background-color: white;
-    font-family: 'ArialMT', 'Arial', sans-serif;
-    font-style: normal;
-    font-size: 16px;
-    color: #FFFFFF;
-    
-    
-    .p-panel {
-        margin-top: 2%;
-        margin-left: 15%;
-        margin-right: 15%;
-        .p-panel-header{
-            background-color: #4153b3;
-            color: white;
-
-        }
-
-        input{
-            margin-top: 1%;
-            width: 100%;
-        }
-
-
-
-        .radio-situacao-categoria{
+.categoria-content{
+    ::ng-deep .painel-categoria{
+        background-color: white;
+        font-family: 'ArialMT', 'Arial', sans-serif;
+        font-style: normal;
+        color: #FFFFFF;
+        
+        
+        .p-panel {
+            position: absolute;
+            width: 70%;
             margin-top: 2%;
-            margin-left: 5%;
-        }
+            margin-left: 15%;
+            margin-right: 15%;
+            font-size: 0.9em;
+            .p-panel-header{
+                background-color: #4153b3;
+                color: white;
+                font-size: 1em;
+                
+            }
+    
+            input{
+                margin-top: 1%;
+                width: 100%;
+                height: 3vh;
+                font-size: 1em;
+            }
 
-        p-button{
-            position: relative;
-            left: 80%;
-            margin-left: 2%;
-        }
+            .text-situacao{
+                margin-left: 2%;
+            }
 
-        .text-btn{
-            margin-left: 7%;
-            font-size: 1em;
-        }
+            .radio-situacao-categoria{
+                margin-left: 2%;
+                margin-top: 2%;
+            }
+    
+    
+            .p-button{
+                position: relative;
+                left: 80%;
+                font-size: 0.8em;
+                width: 5vw;
+                height: 3.5vh;
+                
+                .text-btn{
+                    margin-left: 6%;
+                }
+                
+            }
 
-        .text-situacao{
-            margin-left: 5%;
-        }
+            .buttons{
+                margin-left: 1vw;
 
+               
+               
+            }
+
+            
+    
+        }
+    
+       
+        
+      
+       
+        
+      
+    
     }
-
 }
