@@ -5,6 +5,7 @@ import { SituacaoEnum, SituacaoLabel } from 'src/app/shared/interfaces/enums/sit
 import { ICategoria } from 'src/app/shared/interfaces/ICategoria';
 import { IProduto } from 'src/app/shared/interfaces/IProduto';
 import { CategoriaService } from 'src/app/shared/services/categoria/categoria.service';
+import { ProdutoService } from 'src/app/shared/services/produto/produto.service';
 
 
 @Component({
@@ -20,9 +21,13 @@ export class ProdutoListComponent implements OnInit {
 
   ProdutoSave: IProduto = {} as IProduto; 
 
+  categoriaSave: any = {} as ICategoria;
+
   situacaoSelect!: number;
 
   listCategoria: any = [];
+
+  listProduto: any = [];
 
   public SituacaoLabel = SituacaoLabel;
 
@@ -31,7 +36,8 @@ export class ProdutoListComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: ActivatedRoute,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private produtoService: ProdutoService
   ){
 
   }
@@ -44,6 +50,10 @@ export class ProdutoListComponent implements OnInit {
 
     this.categoriaService.GetAll().then(success => {
       this.listCategoria = success;
+    }),
+
+    this.produtoService.GetAll().then(success => {
+      this.listProduto = success;
     })
 
   }
@@ -57,9 +67,8 @@ export class ProdutoListComponent implements OnInit {
   }
 
   getCategoria(){
-    this.categoriaService.GetAll().then(success => {
-      this.listCategoria = success;
-    })
+    
+    
   }
   
 }

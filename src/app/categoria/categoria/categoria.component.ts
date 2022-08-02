@@ -58,7 +58,7 @@ export class CategoriaComponent implements OnInit {
   save(){    
     this.categoriaSave.nome = this.form.value.nome;
     this.categoriaSave.situacao = this.situacao;
-
+    
     
     if(this.idCategoriaFind){
       

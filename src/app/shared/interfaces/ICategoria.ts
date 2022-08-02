@@ -1,5 +1,5 @@
 export interface ICategoria{
-    id: number;
+    id?: number;
     nome?: string;
     situacao?: boolean
 }

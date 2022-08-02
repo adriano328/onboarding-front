@@ -8,8 +8,8 @@
                 <div class="grid">
                         <div class="col-12 md:col-6 lg:col-2">
                             <p class="text-categoria">Categoria:</p>
-                            <select class="selectCategoria">
-                                <option value="">                 </option>
+                            <select>
+                                <option *ngFor="let categoria of listCategoria" [value]="categoria.nome ">{{categoria.nome}}</option>
                             </select>
                         </div>
                         <div class="col-12 md:col-6 lg:col-7 input-produto">
@@ -36,12 +36,12 @@
           <div class="panel-categoria-list">
             <p-panel>
                 <ng-template pTemplate="header">
-                    <p>Lista de categorias</p>
+                    <p>Lista de Produtos</p>
                     <div class="btn-cabecalho">
                         <p-button routerLink="/produto"><i class="pi pi-plus"></i><p class="text-btn">Adicionar</p></p-button>
                     </div>
                 </ng-template>
-                <p-table [value]="listCategoria" [paginator]="true" [rows]="4" [showCurrentPageReport]="true" responsiveLayout="scroll"
+                <p-table [value]="listProduto" [paginator]="true" [rows]="4" [showCurrentPageReport]="true" responsiveLayout="scroll"
                 currentPageReportTemplate="" [rowsPerPageOptions]="[4,25,50]">
                     <ng-template pTemplate="header">
                         <tr>
@@ -51,13 +51,13 @@
                             <th>Ações</th>
                         </tr>
                     </ng-template>
-                    <ng-template pTemplate="body" let-categoria let-i="rowIndex">
+                    <ng-template pTemplate="body" let-produto let-i="rowIndex">
                         <tr>
                             <td>{{ i + 1 }}</td>
-                            <td>{{categoria.nome}}</td>
-                            <td>{{categoria.situacao.toLowerCase()}}</td>
+                            <td>{{produto.nome}}</td>
+                            <td>{{produto.situacao.toLowerCase()}}</td>
                             <td>
-                                <i class="pi pi-pencil" routerLink="/categoria/{{categoria.id}}"></i>
+                                <i class="pi pi-pencil" routerLink="/categoria/{{produto.id}}"></i>
                                 <i class="pi pi-times"></i>
                             
                             </td>
