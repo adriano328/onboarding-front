@@ -17,6 +17,8 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { ProdutoListComponent } from "./produto/produto-list/ProdutoListComponent";
 import { ProdutoComponent } from './produto/produto/produto.component';
 import { ProdutoModule } from './produto/produto.module';
+import { ClienteComponent } from './cliente/cliente/cliente.component';
+import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
 
 
 
@@ -30,7 +32,9 @@ import { ProdutoModule } from './produto/produto.module';
     CategoriaComponent,
     CategoriaListComponent,
     ProdutoComponent,
-    ProdutoListComponent
+    ProdutoListComponent,
+    ClienteComponent,
+    ClienteListComponent
     
   ],
   imports: [

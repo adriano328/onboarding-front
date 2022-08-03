@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
           items: [
               {label: 'Categoria', routerLink: 'categoria-list'},
               {label: 'Produto', routerLink: 'produto-list'},
-              {label: 'Cliente'}
+              {label: 'Cliente', routerLink: 'cliente-list'}
           ]
       }
   ];
