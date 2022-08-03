@@ -29,6 +29,8 @@ export class ProdutoComponent implements OnInit {
 
   selectedCat!: ICategoria;
 
+  idProdutoFind!: number;
+
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -36,6 +38,7 @@ export class ProdutoComponent implements OnInit {
     private produtoService: ProdutoService
   ) {
       
+
    }
 
   ngOnInit(): void {
@@ -47,7 +50,12 @@ export class ProdutoComponent implements OnInit {
 
     this.getCategoria();
 
-
+    this.idProdutoFind = parseInt(this.route.snapshot.paramMap.get('id')!);
+    if(this.idProdutoFind){
+      this.produtoService.GetById(this.idProdutoFind).then(success =>{
+        this.ProdutoSave = success;
+      })
+    }
 
     
   }
@@ -66,8 +74,13 @@ export class ProdutoComponent implements OnInit {
     this.ProdutoSave.nome = this.form.value.nome;
     this.ProdutoSave.situacao = this.situacao;
     this.ProdutoSave.categoria = this.selectedCat;
-    this.produtoService.post(this.ProdutoSave)
-    console.log(this.ProdutoSave);
+
+    if(this.idProdutoFind){
+      this.produtoService.put(this.ProdutoSave, this.idProdutoFind);
+    }else{
+      this.produtoService.post(this.ProdutoSave)
+    }
+
   }
 
 }

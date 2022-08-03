@@ -57,8 +57,8 @@
                             <td>{{produto.categoria.nome}}</td>
                             <td>{{produto.situacao.toLowerCase()}}</td>
                             <td>
-                                <i class="pi pi-pencil" routerLink="/categoria/{{produto.id}}"></i>
-                                <i class="pi pi-times"></i>
+                                <i class="pi pi-pencil" routerLink="/produto/{{produto.id}}"></i>
+                                <i class="pi pi-times" (click)="deleteProduto(produto.id)" > </i>
                             
                             </td>
                         </tr>

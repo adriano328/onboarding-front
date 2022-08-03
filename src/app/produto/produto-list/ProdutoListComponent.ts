@@ -68,13 +68,17 @@ export class ProdutoListComponent implements OnInit {
       pesquisa:{
         nome: this.form.value.nome,
         situacao: this.form.value.situacao,
-        categoria: this.selectedCat
+        categoria: this.selectedCat.id
       }
     }).then(success => {
       this.listProduto = success;
     })
 
-    console.log(this.listProduto);
+ 
+  
+   
+    
+
     
   }
 
@@ -95,6 +99,11 @@ export class ProdutoListComponent implements OnInit {
       this.listProduto = success;
     })
     
+  }
+
+  deleteProduto(id: number){
+    this.produtoService.delete(id, {useConfirm: false});
+    this.listProduto = this.listProduto.filter((item: {id: number}) => item.id != id );
   }
   
 }
