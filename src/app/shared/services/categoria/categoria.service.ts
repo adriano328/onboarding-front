@@ -18,12 +18,6 @@ export class CategoriaService  extends BaseService<any>{
     super('categoria', http, confirmationSrv, messageSrv);
   }
 
-  searchByName(nome: string){
-    return this.http.get<ICategoria>(`${this.urlBase}/listar-por-nome`,
-    {params: new HttpParams().set('nome', nome || '').set('situacao', 0)}).pipe(
-      
-    )
-  }
-  
+ 
   
 }

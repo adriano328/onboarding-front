@@ -45,16 +45,11 @@ export class ProdutoListComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       nome:[''],
-      situacao: ['']
-    }),
-
-    this.categoriaService.GetAll().then(success => {
-      this.listCategoria = success;
-    }),
-
-    this.produtoService.GetAll().then(success => {
-      this.listProduto = success;
+      situacao: [''],
+      categoria: ['']
     })
+
+   
 
   }
 
@@ -66,8 +61,10 @@ export class ProdutoListComponent implements OnInit {
 
   }
 
-  getCategoria(){
-    
+  getProduto(){
+    this.produtoService.GetAll().then(success => {
+      this.listProduto = success;
+    })
     
   }
   

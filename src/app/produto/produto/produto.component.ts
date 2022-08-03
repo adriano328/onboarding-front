@@ -47,14 +47,12 @@ export class ProdutoComponent implements OnInit {
 
     this.getCategoria();
 
+
+
     
   }
 
-  getProduto(){
-    this.produtoService.GetAll().then(success => {
-      this.listProduto = success;
-    })
-  }
+  
 
   
 
@@ -69,9 +67,7 @@ export class ProdutoComponent implements OnInit {
     this.ProdutoSave.situacao = this.situacao;
     this.ProdutoSave.categoria = this.selectedCat;
     this.produtoService.post(this.ProdutoSave)
-
     console.log(this.ProdutoSave);
-    
   }
 
 }
