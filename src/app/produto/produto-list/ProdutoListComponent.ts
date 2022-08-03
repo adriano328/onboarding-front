@@ -17,6 +17,8 @@ export class ProdutoListComponent implements OnInit {
 
   nome: string = "";
 
+  situacao!: string;
+
   form!:FormGroup;
 
   ProdutoSave: IProduto = {} as IProduto; 
@@ -28,6 +30,8 @@ export class ProdutoListComponent implements OnInit {
   listCategoria: any = [];
 
   listProduto: any = [];
+
+  selectedCat!: ICategoria;
 
   public SituacaoLabel = SituacaoLabel;
 
@@ -49,16 +53,41 @@ export class ProdutoListComponent implements OnInit {
       categoria: ['']
     })
 
-   
+   this.getProduto();
+
+   this.getCategoria();
 
   }
 
-  findByNome(){
+  findByNome(){    
 
+    
+    
+
+    this.produtoService.GetAll({
+      pesquisa:{
+        nome: this.form.value.nome,
+        situacao: this.form.value.situacao,
+        categoria: this.selectedCat
+      }
+    }).then(success => {
+      this.listProduto = success;
+    })
+
+    console.log(this.listProduto);
+    
   }
 
   resetForm(){
+    this.form.reset();
+    this.getProduto();
+  }
 
+
+  getCategoria(){
+    this.categoriaService.GetAll().then(success => {
+      this.listCategoria = success;
+    })
   }
 
   getProduto(){

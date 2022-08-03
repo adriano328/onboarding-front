@@ -45,7 +45,8 @@ export class CategoriaListComponent implements OnInit {
   }
 
   async findByNome(){
-    console.log(this.form.value.situacao);
+
+  
     
    await this.categoriaService.GetAll({
     pesquisa:{
