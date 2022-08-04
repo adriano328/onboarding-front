@@ -1,0 +1,137 @@
+.cliente-content{
+
+    ::ng-deep .painel-cliente-content{
+        background-color: white;
+        font-family: 'ArialMT', 'Arial', sans-serif;
+        font-style: normal;
+        color: #FFFFFF;
+
+        .p-panel {
+            position: relative;
+            margin: 0 auto;
+            width: 70%;
+            margin-top: 2%;
+            box-sizing: border-box;
+          
+            .p-panel-header{
+                background-color: #4153b3;
+                color: white;
+    
+            }
+
+            input{
+                margin-top: 1%;
+                width: 100%;
+                height: 40%;
+                font-size: 0.9em;
+            }
+
+            .text-cpf, .input-cpf{
+                font-size: 0.9em;
+            }
+
+            .text-tipo, .selectTipo{
+                margin-left: 25%;
+                font-size: 0.9em;
+            }
+
+            .text-inscricao, .input-inscricao{
+                margin-left: 10%;
+                font-size: 0.9em;
+            }
+
+            .text-situacao, .radio-situacao-categoria{
+                margin-left: 5%;
+                font-size: 0.9em;
+            }
+
+            .text-nome, .input-nome{
+                margin-left: 12%;
+                font-size: 0.9em;
+            }
+
+            .text-sexo, .selectSexo{
+                margin-left: 25%;
+                font-size: 0.9em;
+            }
+
+            .text-data, .input-data{
+                margin-top: 1%;
+                font-size: 0.9em;
+            }
+
+            .text-endereco, .input-endereco{
+                margin-left: 7%;
+                font-size: 0.9em;
+            }
+
+            .text-bairro, .input-bairro{
+                margin-top: 1%;
+                margin-left: 18%;
+                font-size: 0.9em;
+            }
+            
+            .text-cep, .input-cep{
+                margin-left: 12%;
+                font-size: 0.9em;
+            }
+
+            .text-municipio, .input-municipio{
+                margin-left: 25%;
+                margin-top: 1%;
+                font-size: 0.9em;
+            }
+
+            .text-uf, .input-uf{
+                margin-left: 55%;
+                margin-top: 2%;
+                font-size: 0.9em;
+            }
+
+            .text-telefone, .input-telefone{
+                margin-left: 24%;
+                font-size: 0.9em;
+            }
+
+            .text-celular, .input-celular{
+                margin-left: 25%;
+                font-size: 0.9em;
+            }
+
+            .text-contato, .input-contato{
+                margin-left: 26%;
+                font-size: 0.9em;
+            }
+
+            
+
+
+            .p-button{
+                position: relative;
+                left: 77%;
+                margin-left: 2%;
+                height: 3.5vh; 
+                font-size: 0.9em;
+                width: 5.5vw;
+            }
+    
+            select{
+                margin-top: 2%;
+                text-align: center;
+                width: 70%;
+                height: 40%;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+
+                
+               
+            }
+
+           
+    
+            
+    
+        }
+    
+    }
+}
