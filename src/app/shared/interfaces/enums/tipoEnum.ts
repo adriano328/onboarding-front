@@ -1,7 +1,7 @@
 export enum TipoEnum{
     Selecione = "Selecione",
-    Pessoa_Fisica = "Pessoa Física",
-    Pessoa_Juridica = "Pessoa Jurídica"
+    Pessoa_Fisica = "PESSOA_FISICA",
+    Pessoa_Juridica = "PESSOA_JURIDICA"
 }
 
 export const TipoLabel: Record<TipoEnum, string> = {

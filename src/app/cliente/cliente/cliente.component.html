@@ -1,89 +1,98 @@
 <div class="cliente-content">
     <div class="painel-cliente-content">
-            <p-panel>
-                <ng-template pTemplate="header">
-                    <p>Cliente</p>
-                </ng-template>
-                <div class="flex justify-content-center flex-wrap card-container yellow-container">
-                    <div class="grid">
-                    <form [formGroup]="form">
+        <p-panel>
+            <ng-template pTemplate="header">
+                <p>Cliente</p>
+            </ng-template>
+            <form [formGroup]="form_pessoa">
+            <div class="grid">
+                <div class="col-12 md:col-6 lg:col-3">
+                    <p class="text-tipo">Tipo:</p>
+                    <p-dropdown [options]="tipos" formControlName="tipo" [(ngModel)]="tipo"></p-dropdown>
+                    </div>
                     <div class="col-12 md:col-6 lg:col-2">
-                        <p class="text-tipo">Tipo:</p>
-                        <p-dropdown [options]="tipos" formControlName="tipo" [(ngModel)]="tipo"></p-dropdown>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-4">
-                            <p class="text-cpf">CPF/CNPJ:</p>
-                            <input class="input-cpf" type="text" formControlName="cpf" pInputText>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-2">
-                            <p class="text-inscricao">Inscrição Estadual:</p>
-                            <input type="text" class="input-inscricao" formControlName="inscricao_estadual" pInputText>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-4">
+                        <p class="text-cpf">CPF/CNPJ:</p>
+                        <input class="input-cpf" type="text" formControlName="cpf" pInputText>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-3">
+                        <p class="text-inscricao">Inscrição Estadual:</p>
+                        <input type="text" class="input-inscricao" formControlName="inscricao_estadual" pInputText>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-4">
+                        <div class="situacao">
                             <p class="text-situacao">Situação:</p>
-                            <p-radioButton class="radio-situacao-categoria" value="ATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}"  label="Ativo"></p-radioButton>
-                            <p-radioButton class="radio-situacao-categoria" value="INATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}"  label="Inativo"></p-radioButton> 
+                            <p-radioButton class="radio-situacao-categoria" value="true" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}"  label="Ativo"></p-radioButton>
+                            <p-radioButton class="radio-situacao-categoria" value="false" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}"  label="Inativo"></p-radioButton> 
                         </div>
-                        <div class="col-12 md:col-6 lg:col-4">
-                            <p class="text-nome">Nome/Razão Social:</p>
-                            <input class="input-nome" type="text" formControlName="nome" pInputText>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-2">
-                            <p class="text-sexo">Sexo:</p>
-                            <p-dropdown [options]="sexos" formControlName="sexo" [(ngModel)]="sexo"></p-dropdown>
-                        </div>
-                       
-
-                        <div class="col-12 md:col-6 lg:col-2">
-                            <p class="text-data">Data de Nascimento:</p>
-                            <input class="input-data" type="text" formControlName="data_nascimento" pInputText>
-                        </div>
-                    </form>
-                    <form [formGroup]="form_endereco">
-                        <div class="col-12 md:col-6 lg:col-7">
-                            <p class="text-endereco">Endereço:</p>
-                            <input class="input-endereco" type="text" formControlName="endereco" pInputText>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-3">
-                            <p class="text-bairro">Bairro:</p>
-                            <input class="input-bairro" type="text" formControlName="bairro" pInputText>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-4">
-                            <p class="text-cep">CEP:</p>
-                            <input class="input-cep" type="text" formControlName="cep" pInputText>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-2">
-                            <p class="text-municipio">Municipio:</p>
-                            <input class="input-municipio" type="text" formControlName="municipio" pInputText>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-1">
-                            <p class="text-uf">UF:</p>
-                            <input class="input-uf" type="text" formControlName="uf" pInputText>
-                        </div>
-                    </form>
-                    <form [formGroup]="form_telefone">
-                        <div class="col-12 md:col-6 lg:col-4"></div>
-                        <div class="col-12 md:col-6 lg:col-2">
-                            <p class="text-telefone">Telefone:</p>
-                            <input class="input-telefone" type="text" formControlName="telefone" pInputText>
-                        </div>
-                        
-                        <div class="col-12 md:col-6 lg:col-2">
-                            <p class="text-celular">Celular:</p>
-                            <input class="input-celular" type="text" formControlName="celular" pInputText>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-2">
-                            <p class="text-contato">Contato:</p>
-                            <input class="input-contato" type="text" formControlName="contato" pInputText>
-                        </div>
-                    </form>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <p class="text-nome">Nome/Razão Social:</p>
+                        <input class="input-nome" type="text" formControlName="nome" pInputText>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-2">
+                        <p class="text-sexo">Sexo:</p>
+                        <p-dropdown [options]="sexos" formControlName="sexo" [(ngModel)]="sexo"></p-dropdown>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-3">
+                        <p class="text-data">Data de Nascimento:</p>
+                        <input class="input-data" type="text" formControlName="data_nascimento" pInputText>
+                    </div>
                 </div>
-                <div class="btn">
-                    <p-button class="btn" (click)="save()"><i class="pi pi-check"></i><p class="text-btn">Salvar</p></p-button>
-                    <p-button class="btn" routerLink="/cliente-list"><i class="pi pi-times"></i><p class="text-btn">Cancelar</p></p-button>
+            </form>
+            <form [formGroup]="form_endereco">
+            <div class="grid">
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <p class="text-endereco">Endereço:</p>
+                        <input class="input-endereco" type="text" formControlName="endereco" pInputText>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-2">
+                        <p class="text-bairro">Bairro:</p>
+                        <input class="input-bairro" type="text" formControlName="bairro" pInputText>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-2">
+                        <p class="text-cep">CEP:</p>
+                        <input class="input-cep" type="text" formControlName="cep" pInputText>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-2">
+                        <p class="text-municipio">Municipio:</p>
+                        <input class="input-municipio" type="text" formControlName="municipio" pInputText>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-2">
+                        <p class="text-uf">UF:</p>
+                        <input class="input-uf" type="text" formControlName="uf" pInputText>
+                    </div>
+                    
+            </div>
+        </form> 
+        <form [formGroup]="form_telefone">
+            <div class="grid">
+                <div class="col-12 md:col-6 lg:col-2">
+                    <p class="text-telefone">Telefone:</p>
+                    <input class="input-telefone" type="text" formControlName="telefone" pInputText>
                 </div>
+                <div class="col-12 md:col-6 lg:col-2">
+                    <p class="text-celular">Celular:</p>
+                    <input class="input-celular" type="text" formControlName="celular" pInputText>
+                </div>
+                <div class="col-12 md:col-6 lg:col-2">
+                    <p class="text-contato">Contato:</p>
+                    <input class="input-contato" type="text" formControlName="contato" pInputText>
+                </div>
+            </div>
+        </form>
+        <form [formGroup]="form_email">
+            <div class="grid">
+                <div class="col-12 md:col-6 lg:col-7">
+                    <p class="text-email">E-mail:</p>
+                    <input class="input-email" type="text" formControlName="email" pInputText>
+                </div>
+            </div>
+        </form>
+        <div class="btn">
+            <p-button class="btn" (click)="save()"><i class="pi pi-check"></i><p class="text-btn">Salvar</p></p-button>
+            <p-button class="btn" routerLink="/cliente-list"><i class="pi pi-times"></i><p class="text-btn">Cancelar</p></p-button>
+        </div>
 
-        </div>
-             </p-panel>      
-        </div>
+        </p-panel>
     </div>
+</div>

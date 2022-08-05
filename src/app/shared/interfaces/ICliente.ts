@@ -1,17 +1,17 @@
+import { IEmail } from "./IEmail";
+import { IEndereco } from "./IEndereco";
+import { ITelefone } from "./ITelefone";
+
 export interface ICliente{
-    nome: string;
-    sexo: string;
-    tipo: string;
-    cpf: string;
-    inscricao_estadual: string;
-    situacao: string;
-    data_nascimento: string;
-    endereco: string;
-    bairro: string;
-    cep: string;
-    municipio: string;
-    uf: string;
-    telefone: string;
-    celular: string;
-    contato: string
+    id: number;
+    nomeRazao?: string;
+    sexo?: string;
+    tipo?: string;
+    cpfoucnpj?: string;
+    inscricaoEstadual?: string;
+    situacao?: string;
+    dtaNascimento?: string;
+    endereco?: IEndereco;
+    telefone?: ITelefone;
+    email?: IEmail;
 }
