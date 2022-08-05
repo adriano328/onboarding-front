@@ -6,9 +6,9 @@
             </ng-template>
             <form [formGroup]="form_pessoa">
             <div class="grid">
-                <div class="col-12 md:col-6 lg:col-3">
+                <div class="col-12 md:col-6 lg:col-2">
                     <p class="text-tipo">Tipo:</p>
-                    <p-dropdown [options]="tipos" formControlName="tipo" [(ngModel)]="tipo"></p-dropdown>
+                    <p-dropdown [options]="tipos" class="tipoDropdow" formControlName="tipo" [(ngModel)]="tipo"></p-dropdown>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-cpf">CPF/CNPJ:</p>
@@ -25,13 +25,13 @@
                             <p-radioButton class="radio-situacao-categoria" value="false" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}"  label="Inativo"></p-radioButton> 
                         </div>
                     </div>
-                    <div class="col-12 md:col-6 lg:col-6">
+                    <div class="col-12 md:col-6 lg:col-5">
                         <p class="text-nome">Nome/Razão Social:</p>
                         <input class="input-nome" type="text" formControlName="nome" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-sexo">Sexo:</p>
-                        <p-dropdown [options]="sexos" formControlName="sexo" [(ngModel)]="sexo"></p-dropdown>
+                        <p-dropdown [options]="sexos" class="sexoDropdow" formControlName="sexo" [(ngModel)]="sexo"></p-dropdown>
                     </div>
                     <div class="col-12 md:col-6 lg:col-3">
                         <p class="text-data">Data de Nascimento:</p>
@@ -45,7 +45,7 @@
                         <p class="text-endereco">Endereço:</p>
                         <input class="input-endereco" type="text" formControlName="endereco" pInputText>
                     </div>
-                    <div class="col-12 md:col-6 lg:col-2">
+                    <div class="col-12 md:col-6 lg:col-6">
                         <p class="text-bairro">Bairro:</p>
                         <input class="input-bairro" type="text" formControlName="bairro" pInputText>
                     </div>

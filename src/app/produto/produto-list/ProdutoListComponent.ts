@@ -51,7 +51,7 @@ export class ProdutoListComponent implements OnInit {
       nome:[''],
       situacao: [''],
       categoria: ['']
-    })
+    }),
 
    this.getProduto();
 
@@ -60,10 +60,6 @@ export class ProdutoListComponent implements OnInit {
   }
 
   findByNome(){    
-
-    
-    
-
     this.produtoService.GetAll({
       pesquisa:{
         nome: this.form.value.nome,
@@ -73,13 +69,6 @@ export class ProdutoListComponent implements OnInit {
     }).then(success => {
       this.listProduto = success;
     })
-
- 
-  
-   
-    
-
-    
   }
 
   resetForm(){

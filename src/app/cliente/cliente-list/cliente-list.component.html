@@ -9,7 +9,7 @@
                     
                         <div class="col-12 md:col-6 lg:col-7 input-produto">
                             <p class="categoria-nome">Nome:</p>
-                            <input type="text" formControlName="nome" name="nome" pInputText>
+                            <input type="text" formControlName="nomeRazao" name="nomeRazao" pInputText>
                         </div>
                         <div class="col-12 md:col-6 lg:col-2">
                             <p class="text-situacao">Situação:</p>
@@ -50,11 +50,11 @@
                     <ng-template pTemplate="body" let-cliente let-i="rowIndex">
                         <tr>
                             <td>{{ i + 1 }}</td>
-                            <td>{{cliente.nome}}</td>
-                            <td>{{cliente.categoria.nome}}</td>
-                            <td>{{cliente.situacao.toLowerCase()}}</td>
+                            <td>{{cliente.nomeRazao}}</td>
+                            <td>{{cliente.cpfoucnpj}}</td>
+                            <td>{{cliente.situacao == true? "Ativo":"Inativo"}}</td>
                             <td>
-                                <i class="pi pi-pencil"></i>
+                                <i class="pi pi-pencil" routerLink="/cliente/{{cliente.id}}"></i>
                                 <i class="pi pi-times" > </i>
                             
                             </td>
