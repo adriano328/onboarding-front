@@ -9,7 +9,7 @@ export interface ICliente{
     tipo?: string;
     cpfoucnpj?: string;
     inscricaoEstadual?: string;
-    situacao?: string;
+    situacao?: boolean;
     dtaNascimento?: string;
     endereco?: IEndereco;
     telefone?: ITelefone;

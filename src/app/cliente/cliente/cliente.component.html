@@ -8,34 +8,34 @@
             <div class="grid">
                 <div class="col-12 md:col-6 lg:col-2">
                     <p class="text-tipo">Tipo:</p>
-                    <p-dropdown [options]="tipos" class="tipoDropdow" formControlName="tipo" [(ngModel)]="tipo"></p-dropdown>
+                    <p-dropdown [options]="tipos" class="tipoDropdow" formControlName="tipo" [(ngModel)]="tipo" [(ngModel)]="clienteSave.tipo"></p-dropdown>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-cpf">CPF/CNPJ:</p>
-                        <input class="input-cpf" type="text" formControlName="cpf" pInputText>
+                        <input class="input-cpf" type="text" formControlName="cpf" [(ngModel)]="clienteSave.cpfoucnpj" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-3">
                         <p class="text-inscricao">Inscrição Estadual:</p>
-                        <input type="text" class="input-inscricao" formControlName="inscricao_estadual" pInputText>
+                        <input type="text" class="input-inscricao" formControlName="inscricao_estadual" [(ngModel)]="clienteSave.inscricaoEstadual" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-4">
                         <div class="situacao">
                             <p class="text-situacao">Situação:</p>
-                            <p-radioButton class="radio-situacao-categoria" value="true" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}"  label="Ativo"></p-radioButton>
-                            <p-radioButton class="radio-situacao-categoria" value="false" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}"  label="Inativo"></p-radioButton> 
+                            <p-radioButton [(ngModel)]="clienteSave.situacao" class="radio-situacao-categoria" name="ativo" value="ATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton>
+                            <p-radioButton [(ngModel)]="clienteSave.situacao" class="radio-situacao-categoria" name="inativo" value="INATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Inativo"></p-radioButton> 
                         </div>
                     </div>
                     <div class="col-12 md:col-6 lg:col-5">
                         <p class="text-nome">Nome/Razão Social:</p>
-                        <input class="input-nome" type="text" formControlName="nome" pInputText>
+                        <input class="input-nome" type="text" formControlName="nome" [(ngModel)]="clienteSave.nomeRazao" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-sexo">Sexo:</p>
-                        <p-dropdown [options]="sexos" class="sexoDropdow" formControlName="sexo" [(ngModel)]="sexo"></p-dropdown>
+                        <p-dropdown [options]="sexos" class="sexoDropdow" formControlName="sexo" [(ngModel)]="clienteSave.sexo" [(ngModel)]="sexo"></p-dropdown>
                     </div>
                     <div class="col-12 md:col-6 lg:col-3">
                         <p class="text-data">Data de Nascimento:</p>
-                        <input class="input-data" type="text" formControlName="data_nascimento" pInputText>
+                        <input class="input-data" type="text" formControlName="data_nascimento" [(ngModel)]="clienteSave.dtaNascimento" pInputText>
                     </div>
                 </div>
             </form>
@@ -43,23 +43,23 @@
             <div class="grid">
                     <div class="col-12 md:col-6 lg:col-6">
                         <p class="text-endereco">Endereço:</p>
-                        <input class="input-endereco" type="text" formControlName="endereco" pInputText>
+                        <input class="input-endereco" type="text" formControlName="endereco" [(ngModel)]="clienteSave.endereco.endereco" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-6">
                         <p class="text-bairro">Bairro:</p>
-                        <input class="input-bairro" type="text" formControlName="bairro" pInputText>
+                        <input class="input-bairro" type="text" formControlName="bairro" [(ngModel)]="clienteSave.endereco.bairro" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-cep">CEP:</p>
-                        <input class="input-cep" type="text" formControlName="cep" pInputText>
+                        <input class="input-cep" type="text" formControlName="cep" [(ngModel)]="clienteSave.endereco.cep" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-municipio">Municipio:</p>
-                        <input class="input-municipio" type="text" formControlName="municipio" pInputText>
+                        <input class="input-municipio" type="text" formControlName="municipio" [(ngModel)]="clienteSave.endereco.municipio" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-uf">UF:</p>
-                        <input class="input-uf" type="text" formControlName="uf" pInputText>
+                        <input class="input-uf" type="text" formControlName="uf" [(ngModel)]="clienteSave.endereco.uf" pInputText>
                     </div>
                     
             </div>
@@ -68,15 +68,15 @@
             <div class="grid">
                 <div class="col-12 md:col-6 lg:col-2">
                     <p class="text-telefone">Telefone:</p>
-                    <input class="input-telefone" type="text" formControlName="telefone" pInputText>
+                    <input class="input-telefone" type="text" formControlName="telefone" [(ngModel)]="clienteSave.telefone.numeroTelefone" pInputText>
                 </div>
                 <div class="col-12 md:col-6 lg:col-2">
                     <p class="text-celular">Celular:</p>
-                    <input class="input-celular" type="text" formControlName="celular" pInputText>
+                    <input class="input-celular" type="text" formControlName="celular" [(ngModel)]="clienteSave.telefone.celular" pInputText>
                 </div>
                 <div class="col-12 md:col-6 lg:col-2">
                     <p class="text-contato">Contato:</p>
-                    <input class="input-contato" type="text" formControlName="contato" pInputText>
+                    <input class="input-contato" type="text" formControlName="contato" [(ngModel)]="clienteSave.telefone.contato" pInputText>
                 </div>
             </div>
         </form>
@@ -84,7 +84,7 @@
             <div class="grid">
                 <div class="col-12 md:col-6 lg:col-7">
                     <p class="text-email">E-mail:</p>
-                    <input class="input-email" type="text" formControlName="email" pInputText>
+                    <input class="input-email" type="text" formControlName="email" [(ngModel)]="clienteSave.email.email" pInputText>
                 </div>
             </div>
         </form>

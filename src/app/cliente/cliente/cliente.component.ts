@@ -1,6 +1,7 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { SexoEnum, SexoLabel } from 'src/app/shared/interfaces/enums/sexoEnum';
 import { TipoEnum, TipoLabel } from 'src/app/shared/interfaces/enums/tipoEnum';
 import { ICliente } from 'src/app/shared/interfaces/ICliente';
@@ -16,7 +17,7 @@ import { ClienteService } from 'src/app/shared/services/cliente/cliente.service'
 })
 export class ClienteComponent implements OnInit {
   
-  clienteSave: ICliente = {} as ICliente;
+  clienteSave: any = {} as ICliente;
 
   enderecoSave: IEndereco = {} as IEndereco;
 
@@ -37,6 +38,8 @@ export class ClienteComponent implements OnInit {
   sexo!: string;
 
   tipo!:string;
+
+  idClienteFind!: number;
     
   public SexoLabel = SexoLabel;
   public sexos = Object.values(SexoEnum);
@@ -47,37 +50,45 @@ export class ClienteComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private clienteService: ClienteService
+    private clienteService: ClienteService,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
     this.form_pessoa = this.formBuilder.group({
-      nome:['Lucas Adriano Dias'],
-      sexo:['Masculino'],
+      nome:[''],
+      sexo:[''],
       tipo: [''],
-      cpf:['048.146.171-00'],
-      inscricao_estadual:['235797-15'],
+      cpf:[''],
+      inscricao_estadual:[''],
       situacao:[''],
-      data_nascimento:['26/04/1995'],
+      data_nascimento:[''],
     })
 
     this.form_endereco  = this.formBuilder.group({
-      endereco:['Rua México, N° 08'],
-      bairro:['Jardim Imperial'],
-      cep:['78143-312'],
-      municipio:['Várzea Grande'],
-      uf:['MT'],
+      endereco:[''],
+      bairro:[''],
+      cep:[''],
+      municipio:[''],
+      uf:[''],
     })
 
     this.form_telefone = this.formBuilder.group({
-      telefone:['65-99901-1697'],
-      celular:['65-99288-6664'],
-      contato:['65-3695-1499']
+      telefone:[''],
+      celular:[''],
+      contato:['']
     })
 
     this.form_email = this.formBuilder.group({
-      email:['lucasadrianodias@gmail.com']
+      email:['']
     })
+
+    this.idClienteFind = parseInt(this.route.snapshot.paramMap.get('id')!);
+    if(this.idClienteFind){
+      this.clienteService.GetById(this.idClienteFind).then(success => {
+        this.clienteSave = success;
+      })
+    }
   }
 
 
