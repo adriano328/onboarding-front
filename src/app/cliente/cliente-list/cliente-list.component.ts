@@ -45,11 +45,19 @@ export class ClienteListComponent implements OnInit {
   }
 
   findByNome(){
-
+    this.clienteService.GetAll({
+      pesquisa:{
+        nomeRazao: this.form.value.nomeRazao,
+        situacao: this.form.value.situacao
+      }
+    }).then(success => {
+      this.listCliente = success;
+    })
   }
 
   resetForm(){
     this.form.reset()
+    this.getCliente();
   }
 
   getCliente(){
