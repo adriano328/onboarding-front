@@ -54,10 +54,15 @@ export class ProdutoComponent implements OnInit {
     if(this.idProdutoFind){
       this.produtoService.GetById(this.idProdutoFind).then(success =>{
         this.ProdutoSave = success;
+        this.fillFormValues(success);
       })
     }
+  }
 
-    
+  fillFormValues(produto: any){
+    this.form.controls['nome'].setValue(produto.nome)
+    this.form.controls['situacao'].setValue(produto.situacao)
+    this.form.controls['categoria'].setValue(produto.categoria)
   }
 
 

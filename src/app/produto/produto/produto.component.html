@@ -8,16 +8,16 @@
             <div class="grid">
                     <div class="col-12 md:col-6 lg:col-6">
                         <p class="categoria-nome">Nome:</p>
-                        <input type="text" formControlName="nome" [(ngModel)]="ProdutoSave.nome" pInputText>
+                        <input type="text" formControlName="nome" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-categoria">Categoria:</p>
-                        <p-dropdown [options]="listCategoria" formControlName="categoria" [(ngModel)]="ProdutoSave.categoria" [(ngModel)]="selectedCat" optionLabel="nome" ></p-dropdown>
+                        <p-dropdown [options]="listCategoria" formControlName="categoria" [(ngModel)]="selectedCat" optionLabel="nome" ></p-dropdown>
                     </div>
                     <div class="col-12 md:col-6 lg:col-4">
                         <p class="text-situacao">Situação:</p>
-                        <p-radioButton class="radio-situacao-categoria" [(ngModel)]="ProdutoSave.situacao" name="ativo" value="ATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton>
-                        <p-radioButton class="radio-situacao-categoria" [(ngModel)]="ProdutoSave.situacao" name="inativo" value="INATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Inativo"></p-radioButton> 
+                        <p-radioButton class="radio-situacao-categoria" name="ativo" value="ATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Ativo"></p-radioButton>
+                        <p-radioButton class="radio-situacao-categoria" name="inativo" value="INATIVO" [(ngModel)]="situacao" [ngModelOptions]="{standalone: true}" label="Inativo"></p-radioButton> 
                     </div>
             </div>
             <div class="btn">
