@@ -127,7 +127,7 @@ export class ClienteComponent implements OnInit {
       this.enderecoSave.municipio = this.form_endereco.value.municipio;
       this.enderecoSave.uf = this.form_endereco.value.uf;
 
-      this.telefoneSave.numeroTelefone = this.form_telefone.value.telefone;
+      this.telefoneSave.numeroTelefone = this.form_telefone.value.numeroTelefone;
       this.telefoneSave.celular = this.form_telefone.value.celular;
       this.telefoneSave.contato = this.form_telefone.value.contato;
 
