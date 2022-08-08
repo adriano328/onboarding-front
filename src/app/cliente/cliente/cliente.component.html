@@ -8,15 +8,15 @@
             <div class="grid">
                 <div class="col-12 md:col-6 lg:col-2">
                     <p class="text-tipo">Tipo:</p>
-                    <p-dropdown [options]="tipos" class="tipoDropdow" formControlName="tipo" [(ngModel)]="clienteSave.tipo"></p-dropdown>
+                    <p-dropdown [options]="tipos" class="tipoDropdow" formControlName="tipo" ></p-dropdown>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-cpf">CPF/CNPJ:</p>
-                        <input class="input-cpf" type="text" formControlName="cpfoucnpj" [(ngModel)]="clienteSave.cpfoucnpj" pInputText>
+                        <input class="input-cpf" type="text" formControlName="cpfoucnpj" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-3">
                         <p class="text-inscricao">Inscrição Estadual:</p>
-                        <input type="text" class="input-inscricao" formControlName="inscricaoEstadual" [(ngModel)]="clienteSave.inscricaoEstadual" pInputText>
+                        <input type="text" class="input-inscricao" formControlName="inscricaoEstadual" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-4">
                         <div class="situacao">
@@ -27,15 +27,15 @@
                     </div>
                     <div class="col-12 md:col-6 lg:col-5">
                         <p class="text-nome">Nome/Razão Social:</p>
-                        <input class="input-nome" type="text" formControlName="nomeRazao" [(ngModel)]="clienteSave.nomeRazao" pInputText>
+                        <input class="input-nome" type="text" formControlName="nomeRazao" pInputText>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2">
                         <p class="text-sexo">Sexo:</p>
-                        <p-dropdown [options]="sexos" class="sexoDropdow" formControlName="sexo"  [(ngModel)]="clienteSave.sexo" ></p-dropdown>
+                        <p-dropdown [options]="sexos" class="sexoDropdow" formControlName="sexo"   ></p-dropdown>
                     </div>
                     <div class="col-12 md:col-6 lg:col-3">
                         <p class="text-data">Data de Nascimento:</p>
-                        <input class="input-data" type="text" formControlName="dtaNascimento" [(ngModel)]="clienteSave.dtaNascimento" pInputText>
+                        <input class="input-data" type="text" formControlName="dtaNascimento" pInputText>
                     </div>
                 </div>
             </form>

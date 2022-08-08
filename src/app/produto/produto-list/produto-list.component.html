@@ -55,7 +55,7 @@
                             <td>{{ i + 1 }}</td>
                             <td>{{produto.nome}}</td>
                             <td>{{produto.categoria.nome}}</td>
-                            <td>{{produto.situacao.toLowerCase()}}</td>
+                            <td>{{produto.situacao.toLowerCase() === "ativo"? "Ativo":"Inativo"}}</td>
                             <td>
                                 <i class="pi pi-pencil" routerLink="/produto/{{produto.id}}"></i>
                                 <i class="pi pi-times" (click)="deleteProduto(produto.id)" > </i>

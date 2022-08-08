@@ -52,7 +52,7 @@
                             <td>{{ i + 1 }}</td>
                             <td>{{cliente.nomeRazao}}</td>
                             <td>{{cliente.cpfoucnpj}}</td>
-                            <td>{{cliente.situacao == true? "Ativo":"Inativo"}}</td>
+                            <td>{{cliente.situacao == "ATIVO"? "Ativo":"Inativo"}}</td>
                             <td>
                                 <i class="pi pi-pencil" routerLink="/cliente/{{cliente.id}}"></i>
                                 <i class="pi pi-times" (click)="deleteProduto(cliente.id)"> </i>

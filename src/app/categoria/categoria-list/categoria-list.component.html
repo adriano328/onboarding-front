@@ -48,7 +48,7 @@
                             <tr>
                                 <td>{{ i + 1 }}</td>
                                 <td>{{categoria.nome}}</td>
-                                <td>{{categoria.situacao.toLowerCase()}}</td>
+                                <td>{{categoria.situacao.toLowerCase() === "ativo"? "Ativo":"Inativo"}}</td>
                                 <td>
                                     <i class="pi pi-pencil" routerLink="/categoria/{{categoria.id}}"></i>
                                     <i class="pi pi-times" (click)="deleteCategoria(categoria.id)"></i>
