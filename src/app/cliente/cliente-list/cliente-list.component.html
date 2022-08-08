@@ -55,7 +55,7 @@
                             <td>{{cliente.situacao == true? "Ativo":"Inativo"}}</td>
                             <td>
                                 <i class="pi pi-pencil" routerLink="/cliente/{{cliente.id}}"></i>
-                                <i class="pi pi-times" > </i>
+                                <i class="pi pi-times" (click)="deleteProduto(cliente.id)"> </i>
                             
                             </td>
                         </tr>

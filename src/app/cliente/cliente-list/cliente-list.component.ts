@@ -61,5 +61,10 @@ export class ClienteListComponent implements OnInit {
     
   }
   
+  deleteProduto(id: number){
+    this.clienteService.delete(id, {useConfirm: false});
+    this.listCliente = this.listCliente.filter((item: {id: number}) => item.id != id)
+  }
+
 
 }
