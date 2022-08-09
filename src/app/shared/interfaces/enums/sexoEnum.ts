@@ -1,11 +1,11 @@
 export enum SexoEnum{
-    Selecione = "Selecione",
-    Masculino = "MASCULINO",
-    Feminino = "FEMENINO"
+    Selecione = 'Selecione',
+    Masculino = 'MASCULINO',
+    Feminino = 'FEMININO'
 }
 
 export const SexoLabel:Record<SexoEnum, string> = {
     [SexoEnum.Selecione]: "Selecione",
-    [SexoEnum.Masculino]: "mascu",
+    [SexoEnum.Masculino]: "Masculino",
     [SexoEnum.Feminino]: "Feminino"
 }

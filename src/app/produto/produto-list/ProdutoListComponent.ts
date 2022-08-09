@@ -60,11 +60,13 @@ export class ProdutoListComponent implements OnInit {
   }
 
   findByNome(){    
+    console.log(this.selectedCat);
+    
     this.produtoService.GetAll({
       pesquisa:{
         nome: this.form.value.nome,
         situacao: this.form.value.situacao,
-        categoria: this.selectedCat.id
+        categoria: this.selectedCat.nome
       }
     }).then(success => {
       this.listProduto = success;
